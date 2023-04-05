@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Koops Function</title>
+    </head>
+
+    <body>
+        <span id="name"></span> <span>goals for 2023:</span>
+        <h1 id="driversLicence"></h1>
+        <h1 id="firstCar"></h1>
+        <h1 id="girlfriend"></h1>
+        <h1 id="newCar"></h1>
+
+
+        <script>
+
+            window.addEventListener('load', function () {
+                var name_to_print = "Leandro's";
+                let yearObjective = new YearObjectiveObject(
+                    "Getting a drivers Licence",
+                    "Getting my first car",
+                    "Finding a girl that likes me",
+                    "Getting a job that pays better");
+                printName(name_to_print);
+                yearObjective.printValues();
+            });
+            function printName(name) {
+                document.getElementById("name").textContent=name;
+            }
+
+            class YearObjectiveObject{
+                constructor(driversLicence,firstCar,girlfriend,newJob ){
+                    this.driversLicence = driversLicence;
+                    this.firstCar = firstCar;
+                    this.girlfriend = girlfriend;
+                    this.newJob = newJob;
+                }
+
+                printValues(){
+                    document.getElementById("driversLicence").textContent=this.driversLicence;
+                    document.getElementById("firstCar").textContent=this.firstCar;
+                    document.getElementById("girlfriend").textContent=this.girlfriend;
+                    document.getElementById("newJob").textContent=this.newJob;
+                }
+            }
+        </script>
+    </body>
+
+</html>
