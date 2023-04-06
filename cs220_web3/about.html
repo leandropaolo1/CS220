@@ -241,8 +241,16 @@
 
 </body>
 <!--start Christian---->
-    <footer>
-  <p>&copy; 2023 FusionAi. Designed by Leandro, Sam, and Christian.</p>
+<footer>
+    <span>&copy; 2023 FusionAi. Designed by Leandro, Sam, and Christian.</span>
+    <span class="mx-3" id="date"></span>
+    <!-- Leandro -->
+    <script>
+    var currentDate = new Date();
+    var dateElement = document.getElementById("date");
+    dateElement.innerHTML = "Today's date is " + currentDate.toLocaleDateString();
+    </script>
+    <!-- Leandro -->
 </footer>
 <!---end Christian----->
 
